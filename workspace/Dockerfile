@@ -1664,3 +1664,5 @@ RUN apt-get clean && \
 
 # Set default work directory
 WORKDIR /var/www
+
+CMD yarn start:restartable:watch

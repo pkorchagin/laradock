@@ -1,0 +1,3 @@
+CREATE USER platina WITH PASSWORD 'platina';
+CREATE DATABASE platina;
+GRANT ALL PRIVILEGES ON DATABASE platina TO platina;

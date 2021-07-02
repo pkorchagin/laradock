@@ -582,6 +582,7 @@ services:
         - POSTGRES_CONFLUENCE_DB=${CONFLUENCE_POSTGRES_DB}
         - POSTGRES_CONFLUENCE_USER=${CONFLUENCE_POSTGRES_USER}
         - POSTGRES_CONFLUENCE_PASSWORD=${CONFLUENCE_POSTGRES_PASSWORD}
+      command: ["postgres", "-c", "log_statement=all"]
       networks:
         - backend
 
@@ -1948,7 +1949,7 @@ services:
       build:
         context: ./react
       ports:
-        - "3000:3000"
+        - "3007:3007"
       container_name: react
       stdin_open: true
       environment:
